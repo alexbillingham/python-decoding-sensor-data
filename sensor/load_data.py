@@ -2,9 +2,10 @@ import os
 import glob
 import csv
 
+sensor_data = []
 
-def load_sensor_data() -> list:
-    sensor_data = []
+
+def load_sensor_data():
     # Load all csv files from datasets folder
     sensor_files = glob.glob(os.path.join(os.getcwd(), "datasets", "*.csv"))
     for sensor_file in sensor_files:
