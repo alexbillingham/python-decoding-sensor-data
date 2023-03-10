@@ -1,8 +1,8 @@
 # Runner script for all modules
-from datetime import date, datetime
+from datetime import datetime
 from statistics import mean
 
-from energy_info import EngergyData
+from energy_info import EnergyData
 from house_info import HouseInfo
 from humidity_info import HumidityData
 from load_data import load_sensor_data
@@ -66,7 +66,7 @@ print(f"\tModerate Air Quality Recs: {concentrations['moderate']}")
 print(f"\tBad Air Quality Recs: {concentrations['bad']}")
 
 # Module 5 code here:
-energy_data = EngergyData(data)
+energy_data = EnergyData(data)
 recs = energy_data.get_data_by_area(rec_area=test_area)
 print("\nHouse Energy sensor records for area {} = {}".format(test_area, len(recs)))
 total_energy = energy_data.calculate_energy_usage(data=recs)
