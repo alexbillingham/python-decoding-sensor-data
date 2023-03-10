@@ -25,6 +25,8 @@ recs = house_info.get_data_by_date("id", rec_date=test_date)
 print(f"House sensor records for date {test_date.strftime('%m/%d/%y')} = {len(recs)}")
 
 # Module 3 code here:
+print(f"\nHouse Temperature sensor records for area {test_area} = {len(recs)}")
+print(f"\tMaximum: {max(recs)}, Minimum: {min(recs)} temperatures")
 
 # Module 4 code here:
 
